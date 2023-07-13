@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <td>User</td>
+    <td>Years of Experience</td>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+  <td><%= user.email %></td>
+  <td><%= user.years_experience.presence || "-" %></td>
+</tr>
+<% end %>
+</table>
