@@ -20,7 +20,7 @@ User.all.each do |user|
   skills = Skill.order("RANDOM()")
   
   rand(10).times do |i|
-    user.user_skills.create(skill: skills[i], years_experience: rand(40))
+    user.user_skills.create(skill: skills[i], years_experience: rand(1..40))
   end
 
   puts "added skills for #{user.email}"
