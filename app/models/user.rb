@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
 
-  def years_experience
+  def max_years_experience
     nil
   end
 end
