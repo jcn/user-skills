@@ -1,12 +1,18 @@
-<table>
-  <tr>
-    <td>User</td>
-    <td>Max Years of Experience</td>
-  </tr>
 <% @users.each do |user| %>
-  <tr>
-  <td><%= user.email %></td>
-  <td><%= user.max_years_experience.presence || "-" %></td>
-</tr>
+<div class="w-full flex my-8 items-center border-b pb-8">
+  <div class="ml-8 h-20 w-20 mr-4">
+    <img class="rounded-full w-full h-full object-cover" src="https://robohash.org/<%= rand %>" loading="lazy" />
+  </div>
+
+  <div class="w-60 mr-4">
+    <div>
+      <%= link_to user.name, "mailto:#{user.email}", class: "text-orange-500 hover:text-orange-700" %><br />
+      <%= user.max_years_experience.presence || "-" %> years of experience
+    </div>
+  </div>
+
+  <div class="w-20">
+    Save
+  </div>
+</div>
 <% end %>
-</table>
