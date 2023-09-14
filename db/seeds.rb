@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 5000.times do
-  user = User.create(email: Faker::Internet.email) rescue nil
+  user = User.create(email: Faker::Internet.email, name: Faker::Name.name) rescue nil
   puts user.email
 end
 
