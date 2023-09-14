@@ -12,6 +12,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
 
   def max_years_experience
-    nil
+    user_skills.map(&:years_experience).max
   end
 end

@@ -7,7 +7,7 @@
   <div class="w-60 mr-4">
     <div>
       <%= link_to user.name, "mailto:#{user.email}", class: "text-orange-500 hover:text-orange-700" %><br />
-      <%= user.max_years_experience.presence || "-" %> years of experience
+      <%= user.max_years_experience.presence || 0 %> years of experience
     </div>
   </div>
 
