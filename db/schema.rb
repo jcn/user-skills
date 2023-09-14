@@ -15,6 +15,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_13_025631) do
     t.string "name", null: false
   end
 
+  create_table "user_saves", force: :cascade do |t|
+    t.integer "staff_id", null: false
+    t.integer "worker_id", null: false
+    t.string "notes", null: false
+  end
+
   create_table "user_skills", force: :cascade do |t|
     t.integer "user_id"
     t.integer "skill_id"
@@ -26,6 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_13_025631) do
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
+    t.boolean "staff", default: false, null: false
   end
 
 end
