@@ -9,6 +9,12 @@ gem "rails", "~> 7.0.8"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Easy way to handle JS imports
+gem "importmap-rails"
+
+# All that Hotwire goodness
+gem "turbo-rails"
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
