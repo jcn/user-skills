@@ -33,5 +33,3 @@ Here is what this might look like in the Rails console:
   - With the highest number of years experience at the top
 2. Update the main page to look like [this Figma design](https://www.figma.com/file/IGrW9BbtG4AtW8E2bU2IoW/Coding-Sample?type=design&node-id=2-2&mode=design&t=XabrHnjlZd4aXejF-0)
   - You should use the `ApplicationController#current_user` method (you do not need to build an auth system)
-3. Implement the "Save" functionality, preferably using Hotwire
-  - You should use the `user_saves` table that exists in the database to store the saves (see the ERD for details)
