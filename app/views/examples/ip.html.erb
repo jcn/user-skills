@@ -1,0 +1,36 @@
+<% content_for(:page_title, "IP test") %>
+
+<%= javascript_tag do %>
+async function fetchIP() {
+  try {
+    const response = await fetch('http://ip.jsontest.com/?alloworigin=false');
+    const result = await response.json();
+
+    const el = document.getElementById("ip")
+    el.innerHTML = result.ip;
+
+  } catch(err) {
+    console.log(err);
+    alert(err); // Failed to fetch
+  }
+}
+<% end %>
+
+<pre class="border p-4 text-sm font-mono my-5 bg-gray-100">
+// Code
+async function fetchIP() {
+  try {
+    const response = await fetch('http://ip.jsontest.com/');
+    const result = await response.json();
+
+    const el = document.getElementById("ip")
+    el.innerHTML = result.ip;
+
+  } catch(err) {
+    console.log(err);
+    alert(err); // Failed to fetch
+  }
+}
+</pre>
+
+<button id="ip" class="bg-orange-500 hover:bg-orage-700 rounded py-1 px-4" onclick="fetchIP()">fetchIP()</button>
